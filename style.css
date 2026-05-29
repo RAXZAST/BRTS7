@@ -536,7 +536,7 @@ header .buttons a #icon:hover{
     margin-top: 30px;
     pointer-events: none;
 }
-.sec4 .gallery a:hover{
+.sec4 .gallery a:hover img{
     transform: scale(102%);
 }
 .sec4 .analytics{

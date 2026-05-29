@@ -79,7 +79,7 @@ gsap.from(".sec3 .left, .sec3 .right *", {
 });
 
     // SECTION 4 GSAP ANIMATION
-gsap.from(".sec4 .gallery *", {
+gsap.from(".sec4 .gallery h2, .sec4 .gallery h4, .sec4 .gallery .popular a", {
     y: 10,
     opacity: 0,
     duration: 1,
@@ -156,10 +156,10 @@ gsap.from(".sec6 h2, .sec6 h4, .sec6 form", {
 });
 
     // FOOTER GSAP ANIMATION
-gsap.from("footer *", {
+gsap.from("footer #container, footer .bottom", {
     y: 10,
     opacity: 0,
-    duration: 0.2,
+    duration: 1,
     stagger: 0.2,
     overwrite: true,
     scrollTrigger: {

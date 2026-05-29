@@ -45,6 +45,7 @@ gsap.from("header", {
     y: -20,
     opacity: 0,
     duration: 1,
+    delay: 0.5,
     overwrite: true,
     delay: 2.5
 });

@@ -46,7 +46,7 @@ gsap.from("header", {
     opacity: 0,
     duration: 1,
     overwrite: true,
-    delay: 1.5
+    delay: 2.5
 });
 
     // SECTION 2 GSAP ANIMATION

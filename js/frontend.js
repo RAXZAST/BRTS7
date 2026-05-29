@@ -73,6 +73,6 @@ let checkbox = document.querySelector(".checkbox");
 let checkIcon = document.querySelector(".checkbox span svg");
 
 checkbox.onclick = function () {
-    checkIcon.classList.toggle("show")
+    checkIcon.classList.toggle("hidden")
 }
 

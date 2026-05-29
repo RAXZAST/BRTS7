@@ -526,15 +526,19 @@ header .buttons a #icon:hover{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 .sec4 .gallery img{
-    height: clamp(300px, 25vw, 350px);
+    width: 100%;
+    height: auto;
     border-radius: 20px;
     border: 2px solid var(--border);
     background-color: black;
-    margin-top: 30px;
     pointer-events: none;
+}
+.sec4 .gallery a{
+    width: calc(100% / 3);
+    margin-top: 30px;
 }
 .sec4 .gallery a:hover img{
     transform: scale(102%);
@@ -810,6 +814,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: max-content;
 }
 .sec6 form .checkbox span{
     height: 20px;
@@ -824,10 +829,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--border);
 }
 .sec6 form .checkbox span svg{
-    display: none;
+    display: flex;
 }
-.sec6 form .checkbox span .show{
-    display: block;
+.sec6 form .checkbox span .hidden{
+    display: none;
 }
 .sec6 form button:hover{
     filter: brightness(80%);
@@ -1073,6 +1078,9 @@ header .nav, header #nav-button, header .nav ul{
         flex-direction: column-reverse;
         gap: 10px;
     }
+    .sec4 .gallery a{
+        width: 100%;
+    }
     .sec4 .gallery img{
         height: auto;
         width: 100%;
@@ -1317,6 +1325,9 @@ header .nav, header #nav-button, header .nav ul{
         flex-direction: row;
         gap: 10px;
     }
+    .sec4 .gallery a{
+        width: calc(100% / 3);
+    }
     .sec4 .gallery img{
         height: auto;
         width: 100%;
@@ -1399,8 +1410,6 @@ header .nav, header #nav-button, header .nav ul{
         gap: 50px;
         padding-right: 0%;
     }
-    
-    
 }
 
     /* Media query Ultra wide monitor */
@@ -1414,8 +1423,12 @@ header .nav, header #nav-button, header .nav ul{
     .sec4{
         gap: 30px;
     }
+    .sec4 .gallery a{
+        width: calc(100% / 3);
+    }
     .sec4 .gallery img{
-        height: clamp(250px, 22vw, 300px);
+        width: 100%;
+        height: auto;
     }
     .sec4 .analytics{
         gap: 30px;

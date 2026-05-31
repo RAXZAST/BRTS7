@@ -34,10 +34,10 @@ window.addEventListener("load", function () {
 
     // SECTION 1 GSAP ANIMATION
 gsap.from(".sec1 *", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     delay: 1.5
 });
@@ -52,69 +52,69 @@ gsap.from("header", {
 
     // SECTION 2 GSAP ANIMATION
 gsap.from(".sec2 h2, .sec2 .container .album", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec2",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 
     // SECTION 3 GSAP ANIMATION
 gsap.from(".sec3 .left, .sec3 .right *", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec3",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 
     // SECTION 4 GSAP ANIMATION
 gsap.from(".sec4 .gallery h2, .sec4 .gallery h4, .sec4 .gallery .popular a", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec4 .gallery",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 gsap.from(".sec4 .analytics .box, .sec4 .analytics svg", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec4 .analytics",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 
     // SECTION 5 GSAP ANIMATION
 gsap.from(".sec5 h2, .sec5 h4", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec5",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 gsap.from(".sec5 .profiles", {
@@ -125,46 +125,46 @@ gsap.from(".sec5 .profiles", {
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec5 .profiles",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 gsap.from(".sec5 .profiles .profile", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec5 .profiles",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 
     // SECTION 6 GSAP ANIMATION
 gsap.from(".sec6 h2, .sec6 h4, .sec6 form", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: ".sec6",
-        start: "top 90%"
+        start: "top 50%"
     }
 });
 
     // FOOTER GSAP ANIMATION
 gsap.from("footer #container, footer .bottom", {
-    y: 10,
+    y: 15,
     opacity: 0,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.1,
     overwrite: true,
     scrollTrigger: {
         scroller: "body",
         trigger: "footer",
-        start: "top 90%"
+        start: "top 50%"
     }
 });

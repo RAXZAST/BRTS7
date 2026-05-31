@@ -10,6 +10,28 @@
     <meta name="description" content="BRTS7 official website. Discover music, projects, and latest releases like SYMBIOTE and NERVY FUNK.">
     <meta name="keywords" content="BRTS7, music producer, phonk, funk, SYMBIOTE, NERVY FUNK">
     <meta name="author" content="BRTS7">
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
+
 </head>
 <body oncontextmenu="return false;">
     <div class="loader">
@@ -379,6 +401,27 @@
         </div>
     </footer>
 </body>
+<!-- Load Lenis from jsDelivr CDN -->
+<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+<script>
+  // Initialize Lenis smooth scroll
+  const lenis = new Lenis({
+    duration: 1.5,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -8 * t)),
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+  });
+
+  // Setup the Request Animation Frame (RAF) loop
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -1,0 +1,37 @@
+{
+    "webdata": {
+        "header": {
+            "title": "BRTS7 - Becker Music Group",
+            "description": "BRTS7 - Becker Music Group official website. Discover music, and latest releases like SYMBIOTE and NERVY FUNK.",
+            "keywords": ["BRTS7", "Becker Music Group", "music", "releases", "SYMBIOTE", "NERVY FUNK", "funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+        },
+        "contactLinks": {
+            "spotify": "https://open.spotify.com/artist/04H6h6RYseXvpjRTmc3lTw",
+            "instagram": "https://www.instagram.com/clubbrts7",
+            "youtube": "#",
+            "tiktok": "#",
+            "discord": "https://discord.gg/pTbnsfu2Ap",
+            "whatsapp": "https://wa.me/5547991959612?text=Hello%20BRTS7",
+            "email": "beckermusicgroup@gmail.com",
+            "weblink": "index.html",
+            "foundersInstagramLinks": {
+                "algus": "https://www.instagram.com/rr.becker",
+                "brutos": "https://www.instagram.com/djbrutos77.ofc",
+                "dyren": "https://www.instagram.com/nandomh_"
+            }
+        },
+        "webTexts": {
+            "about": {
+                "top": "BRTS7 / Becker Music Group is an independent label focused on pushing the boundaries of Funk, Phonk, and electronic music.",
+                "bottom": "Founded by Rafael Becker and João Victor Leite, it stands for innovation and raw underground energy. The label has built momentum through standout releases like SYMBIOTE and NERVY FUNK. BRTS7 is dedicated to discovering new talent and shaping the future of independent sound."
+            },
+            "milestones": "Milestones like SYMBIOTE and Nervy Funk highlight BRTS7’s rise, defining its raw funk-driven sound and growing impact in the underground scene.",
+            "anylytics": {
+                "monthlyListeners": "1M",
+                "ListenersInNumber": "1,000,000",
+                "monthlyDemos": 20
+            },
+            "copyright": "© 2026 BRTS7 - Becker Music Group. All rights reserved."
+        }
+    }
+}

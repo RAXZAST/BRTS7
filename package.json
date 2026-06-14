@@ -1,0 +1,15 @@
+{
+  "name": "BRTS7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["phonk", "music", "record", "label", "brazil", "funky", "beats", "algus", "brutos"],
+  "author": "RAXZ AST",
+  "license": "ISC",
+  "description": "BRTS7 Brazil based phonk music record lavel founded by Algus and Brutos",
+  "dependencies": {
+    "firebase": "^12.14.0"
+  }
+}

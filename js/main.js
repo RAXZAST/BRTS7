@@ -1,48 +1,53 @@
     // AUDIO FILE UPLOAD FUNCTIONALITY 
-let fileInput = document.querySelector("#upload-file");
+//function audioFileUpload() {
+const fileInput = document.querySelector("#upload-file");
 let fileName = document.querySelector("#file-name");
 let fileIcon = document.querySelector("#file-icon");
 let uploadDone = document.querySelector("#upload-done");
 
-function getfile() {
+function getFile() {
     let audioFile = fileInput.value.split("\\").pop();
     let fileOnly = audioFile.length > 18 ? audioFile.substring(0, 18) + "..." : audioFile
     fileName.textContent = fileOnly;
     fileIcon.setAttribute("style", "display: none");
     uploadDone.setAttribute("style", "display: flex");
 }
+//} audioFileUpload()
+
 
     // LATEST RELEASES UPDATE AND MUSIC PREVIEW SYSTEM
-let sec2album = document.querySelectorAll(".sec2 .album");
+function latestReleaseUpdate() {
+let releaseContainer = document.querySelector(".sec2 .container");
 
-/*
-async function loadData() {
-    try {
-        const response = await fetch('data/release.json'); // Path to your file
-        const data = await response.json();        // Parse JSON into JS object
-        // console.log(data);
-    } catch (error) {
-        console.error("Could not load JSON:", error);
-    }
+async function loadReleases() {
+    const response = await fetch("data/release.json");
+    const data = await response.json();
+
+    data.releases.forEach(release => {
+        let joinArtist = Array.isArray(release.artist) ? release.artist.join(', ') : String(release.artist || '');
+        let splittedArtist = joinArtist.length > 26 ? joinArtist.substring(0, 26) + "..." : joinArtist;
+        fetch(`https://open.spotify.com/oembed?url=${encodeURIComponent(release.spotify)}`)
+        .then(res => res.json())
+        .then(data => {
+            let splittedTitle = data.title.length > 12 ? data.title.substring(0, 12) + "..." : data.title;
+            const artistName = data.title.split(" - ").pop();
+            releaseContainer.innerHTML += `
+            <div title="${data.title}" class="album" data-link="${release.spotify}" title="">
+                <img src="${data.thumbnail_url}" title="${release.tags}">
+                <div class="info">
+                    <h4 id="title">${splittedTitle}</h4>
+                    <p id="artist">${splittedArtist}</p>
+                </div>
+            </div>
+        `;
+        });
+
+        
+    });
 }
-loadData();*/
-
-sec2album.forEach(function(album) {
-    let img = album.querySelector("img")
-    let title = album.querySelector("h4")
-    let artist = album.querySelector("p")
-
-    img.setAttribute("src", "media/cover-art/nervy-funk.png");
-    let titleText = "NERVY FUNK";
-    let artistText = "SATURAST, DJ ALGUS";
-
-    title.innerText = titleText.length > 14 ? titleText.substring(0, 14) + "..." : titleText;
-    artist.innerText = artistText.length > 25 ? artistText.substring(0, 25) + "..." : artistText;
-
-});
+loadReleases();
 
 let iframe = document.querySelector("iframe");
-let releaseContainer = document.querySelector(".sec2 .container");
 let previewWindow = document.querySelector(".sec2 .preview")
 
 function convertSpotifyURL(url) {
@@ -53,14 +58,14 @@ function convertSpotifyURL(url) {
 }
 
 releaseContainer.onclick = function (container) {
-    previewWindow.style = "display: flex";
-    body.style = "overflow-y: none";
-    html.style = "overflow-y: none";
-    
+    if (container.target.closest(".album")) {
+        previewWindow.style = "display: flex";
+        body.style = "overflow-y: hidden";
+        html.style = "overflow-y: hidden";
+    }
     let embeddedLink = container.target.closest(".album").getAttribute("data-link");
     let updateLink = convertSpotifyURL(embeddedLink)
     iframe.setAttribute("src", updateLink);
-    console.log(updateLink);
 }
 
 previewWindow.onclick = function (event) {
@@ -72,3 +77,69 @@ previewWindow.onclick = function (event) {
     }
 }
 
+} latestReleaseUpdate()
+
+    // CONTACT FORM FULL PART
+function contactFormFullPart() {
+
+const form = document.querySelector("form")
+const name = document.querySelector("form #name");
+const artistName = document.querySelector("form #artist-name");
+const trackTitle = document.querySelector("form #track-title");
+const email = document.querySelector("form #email");
+const socialUrl = document.querySelector("form #social-url");
+const message = document.querySelector("form textarea");
+const releaseDate = document.querySelector("form #release-date");
+fileInput;
+const driveUrl = document.querySelector("form #drive-url");
+const submit = document.querySelector("form #submit");
+
+////////////////
+let nameData;
+let artistNameData;
+let trackTitleData;
+let emailData;
+let socialUrlData;
+let messageData;
+let releaseDateData;
+let fileData;
+let driveUrlData;
+let isReleasedTrack = false;
+
+let messageSuccessHint = false;
+
+    // ACTION AFTER SUBMIT
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    checkIcon.classList.contains("hidden") ? isReleasedTrack = "Already Released" : isReleasedTrack = "Not Released Yet"
+    // isReleasedTrack = checkIcon.classList.contains("hidden");
+    if (messageSuccessHint == false) {
+        let emailContain = email.value.includes("@" && ".");
+        if (userName.value == "" || email.value == "" || serviceType.value == "" || message.value == "" || message.value.length < 20 || !message.value.trim() || emailContain == false) {
+            if (userName.value == "") {
+                userName.classList.add("wrong")
+            }if (email.value == "" || emailContain == false) {
+                email.classList.add("wrong")
+            }if (serviceType.value == "") {
+                serviceType.classList.add("wrong")
+            }if (message.value == "") {
+                message.classList.add("wrong")
+            }
+        } else {
+                // ALL FORM DATA FOR BACKEND
+            nameData = name.value.trim();
+            artistNameData = artistName.value.trim();
+            trackTitleData = trackTitle.value.trim();
+            emailData = message.value.trim();
+            socialUrlData = message.value.trim();
+            messageData = message.value.trim();
+            releaseDateData = releaseDate.value;
+            fileData = fileInput.files[0];
+            driveUrlData = driveUrl.value.trim();
+            isReleasedTrack
+        }
+    }
+});
+    
+}
+contactFormFullPart()

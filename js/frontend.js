@@ -43,7 +43,6 @@ sec1cont.addEventListener("mousemove", function (event) {
     let centerY = rect.height / 2;
     let rotateY = (x - centerX) / centerX * 9;
     let rotateX = - (y - centerY) / centerY * 9;
-
     sec1img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 });
 
@@ -73,6 +72,69 @@ let checkbox = document.querySelector(".checkbox");
 let checkIcon = document.querySelector(".checkbox span svg");
 
 checkbox.onclick = function () {
-    checkIcon.classList.toggle("hidden")
+    checkIcon.classList.toggle("hidden");
 }
 
+    // WEB DATA FROM JSON
+let webTitle = document.querySelector("title");
+let webDescription = document.querySelector("#webDescription");
+let webKeyWords = document.querySelector("#webKeyWords");
+
+let webSpotify = document.querySelectorAll("#web-spotify");
+let webInstagram = document.querySelector("#web-instagram");
+let webTiktok = document.querySelector("#web-tiktok");
+let webYoutube = document.querySelector("#web-youtube");
+let webDiscord = document.querySelectorAll("#web-discord");
+let webWhatsapp = document.querySelector("#web-whatsapp");
+let webEmail = document.querySelector("#web-email");
+let webMail = document.querySelector("#mail");
+let webMailText = document.querySelector("#web-mail");
+let webLink = document.querySelector("#web-logo");
+
+let webAlgus = document.querySelector("#web-algus");
+let webBrutos = document.querySelector("#web-brutos");
+let webDyren = document.querySelector("#web-dyren");
+
+let webAboutTop = document.querySelector("#web-top");
+let webAboutBottom = document.querySelector("#web-bottom");
+let webMilestone = document.querySelector("#web-milestone");
+let webListeners = document.querySelector("#web-listeners");
+let webDemos = document.querySelector("#web-demos");
+let webListenersP = document.querySelector("#web-listeners-p");
+let webDemosP = document.querySelector("#web-demos-p");
+let copyright = document.querySelector("#copyright");
+
+async function loadWebData() {
+    const response = await fetch("data/webdata.json");
+    const data = await response.json();
+    //console.log(data.webdata.header.title)
+    webTitle.textContent = data.webdata.header.title;
+    webDescription.setAttribute("content", `${data.webdata.header.description}`);
+    webKeyWords.setAttribute("content", `${data.webdata.header.keywords}`);
+    webSpotify.forEach(e => {
+        e.setAttribute("href", `${data.webdata.contactLinks.spotify}`)
+    });
+    webInstagram.setAttribute("href", `${data.webdata.contactLinks.instagram}`)
+    webTiktok.setAttribute("href", `${data.webdata.contactLinks.tiktok}`)
+    webYoutube.setAttribute("href", `${data.webdata.contactLinks.youtube}`)
+    webDiscord.forEach(e => {
+        e.setAttribute("href", `${data.webdata.contactLinks.discord}`)
+    });
+    webWhatsapp.setAttribute("href", `${data.webdata.contactLinks.whatsapp}`)
+    webEmail.setAttribute("href", `mailto:${data.webdata.contactLinks.email}`)
+    webMail.setAttribute("href", `mailto:${data.webdata.contactLinks.email}`)
+    webLink.setAttribute("href", `${data.webdata.contactLinks.weblink}`)
+    webMailText.textContent = `${data.webdata.contactLinks.email}`
+    webAlgus.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.algus}`)
+    webBrutos.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.brutos}`)
+    webDyren.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.dyren}`)
+    webAboutTop.textContent = `${data.webdata.webTexts.about.top}`
+    webAboutBottom.textContent = `${data.webdata.webTexts.about.bottom}`
+    webMilestone.textContent = `${data.webdata.webTexts.milestones}`
+    webListeners.textContent = `${data.webdata.webTexts.anylytics.monthlyListeners}+`
+    webDemos.textContent = `${data.webdata.webTexts.anylytics.monthlyDemos}+`
+    webListenersP.textContent = `${data.webdata.webTexts.anylytics.ListenersInNumber}+ Listeners from all over the world listening BRTS7 every month and making it one of the top record label in Brazil`
+    webDemosP.textContent = `Over ${data.webdata.webTexts.anylytics.monthlyDemos}+ demos are submitted each month from various locations around the globe.`
+    copyright.textContent = `${data.webdata.webTexts.copyright}`
+}
+loadWebData();

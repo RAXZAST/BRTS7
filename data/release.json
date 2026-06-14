@@ -1,10 +1,77 @@
 {
-  "release1": {
-    "title": "MONTAGEM OBSCURE",
-    "artist": ["SATURAST", "DJ ALGUS"],
-    "cover": "cover1.jpg",
-    "link": "https://open.spotify.com/album/38kOBobcrsaZg3pPaBvH4r?si=fqP3rUewQIOx3ANbdqb-GQ",
-    "order": 1,
-    "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
-  }
+  "releases": [
+    {
+      "id": 1,
+      "artist": ["DJ KVNXD", "Dj Zidzz", "BRTS7", "SATURAST", "RAXZ AST"],
+      "spotify": "https://open.spotify.com/album/0Y4lL1j9XikSvmkV3EBhaX?si=lh1XVwmXQ7y9NBmw30rcWQ",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 2,
+      "artist": ["DJ xela 077", "SCOUNDR3L", "BRTS7", "MC JO7"],
+      "spotify": "https://open.spotify.com/album/77lVEAIFT4z9KjdZm3PLdb?si=FuMNNm4GT6qhNUedPEeaww",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 3,
+      "artist": ["DJ KVNXD", "Dj Zidzz", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/4dyj6kK16unMqcb9twXSSn?si=yzGoTQkwTEqIWRALDng_Mg",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 4,
+      "artist": ["Pheyx", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/76wrKCaFq6UD4bPd9TfsMd?si=6G9uB8jnRoWCHo-A6jfMRQ",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 5,
+      "artist": ["Prod.Syrel", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/0WNV2CFIeYIXNgo9xJEOzI?si=227OZ6krQpu6Ysj-Jf57Yg",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 6,
+      "artist": ["MAXRXDXX", "dj ih$cher", "ITTV RECORDS", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/7iDbHjxWPbUY8KdDN8dVHJ?si=UgogTK1ASnmN8BbKQ6CvdQ",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 7,
+      "artist": ["DJ RZZFK", "DJ ZNEY", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/2BF8fQMlfQ74Hgn9jqHmxt?si=sR-SkPbUQJSB9Y-DXvvb8Q",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 8,
+      "artist": ["dj ih$cher", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/2ffHmTGnmHwz96QJ8jH9zI?si=sVO8A2fzT0q7ql1piumHzw",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 9,
+      "artist": ["SCOUNDR3L", "DJ VAL7", "DJ ALGUS ZL", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/1PB5LyjFF7YWKsm5Le28tc?si=PPfK1P1EQq2qxvaYwAf4Vw",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 10,
+      "artist": ["Gisolatodos", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/6P65oFArOjeV7bznHkOCJF?si=Nx7k6wNCREKh_wYw-zuesg",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 11,
+      "artist": ["Lucasdejong08", "DJ NRF", "DJ HALYZUU ORIGINAL", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/5TauAdJhfaJYUIZNQvxY9J?si=MUC-KBUOSvqcL1xWozElVA",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    },
+    {
+      "id": 12,
+      "artist": ["A1RZY", "DJ ALGUS ZL", "BRTS7"],
+      "spotify": "https://open.spotify.com/album/6bJGqBRU9ZoRSxTOqyon8m?si=56mI4esnQEiVXSViDfCh5g",
+      "tags": ["funk", "phonk", "underground", "lo-fi", "vaporwave", "chill", "dark", "atmospheric"]
+    }
+    
+  ]
 }

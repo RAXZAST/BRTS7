@@ -128,7 +128,7 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec5 .profiles",
-            start: "top 50%"
+            start: "top 0%"
         }
     });
     gsap.from(".sec5 .profiles .profile", {
@@ -140,7 +140,7 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec5 .profiles",
-            start: "top 50%"
+            start: "top 0%"
         }
     });
 
@@ -154,7 +154,7 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec6",
-            start: "top 50%"
+            start: "top 0%"
         }
     });
 

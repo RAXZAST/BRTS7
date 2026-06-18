@@ -1,18 +1,18 @@
     // AUDIO FILE UPLOAD FUNCTIONALITY 
-//function audioFileUpload() {
-const fileInput = document.querySelector("#upload-file");
-let fileName = document.querySelector("#file-name");
-let fileIcon = document.querySelector("#file-icon");
-let uploadDone = document.querySelector("#upload-done");
+// function audioFileUpload() {
+// const fileInput = document.querySelector("#upload-file");
+// let fileName = document.querySelector("#file-name");
+// let fileIcon = document.querySelector("#file-icon");
+// let uploadDone = document.querySelector("#upload-done");
 
-function getFile() {
-    let audioFile = fileInput.value.split("\\").pop();
-    let fileOnly = audioFile.length > 18 ? audioFile.substring(0, 18) + "..." : audioFile
-    fileName.textContent = fileOnly;
-    fileIcon.setAttribute("style", "display: none");
-    uploadDone.setAttribute("style", "display: flex");
-}
-//} audioFileUpload()
+// function getFile() {
+//     let audioFile = fileInput.value.split("\\").pop();
+//     let fileOnly = audioFile.length > 18 ? audioFile.substring(0, 18) + "..." : audioFile
+//     fileName.textContent = fileOnly;
+//     fileIcon.setAttribute("style", "display: none");
+//     uploadDone.setAttribute("style", "display: flex");
+// }
+// } audioFileUpload()
 
 
     // LATEST RELEASES UPDATE AND MUSIC PREVIEW SYSTEM
@@ -80,66 +80,66 @@ previewWindow.onclick = function (event) {
 } latestReleaseUpdate()
 
     // CONTACT FORM FULL PART
-function contactFormFullPart() {
+// function contactFormFullPart() {
 
-const form = document.querySelector("form")
-const name = document.querySelector("form #name");
-const artistName = document.querySelector("form #artist-name");
-const trackTitle = document.querySelector("form #track-title");
-const email = document.querySelector("form #email");
-const socialUrl = document.querySelector("form #social-url");
-const message = document.querySelector("form textarea");
-const releaseDate = document.querySelector("form #release-date");
-fileInput;
-const driveUrl = document.querySelector("form #drive-url");
-const submit = document.querySelector("form #submit");
+// const form = document.querySelector("form")
+// const name = document.querySelector("form #name");
+// const artistName = document.querySelector("form #artist-name");
+// const trackTitle = document.querySelector("form #track-title");
+// const email = document.querySelector("form #email");
+// const socialUrl = document.querySelector("form #social-url");
+// const message = document.querySelector("form textarea");
+// const releaseDate = document.querySelector("form #release-date");
+// fileInput;
+// const driveUrl = document.querySelector("form #drive-url");
+// const submit = document.querySelector("form #submit");
 
-////////////////
-let nameData;
-let artistNameData;
-let trackTitleData;
-let emailData;
-let socialUrlData;
-let messageData;
-let releaseDateData;
-let fileData;
-let driveUrlData;
-let isReleasedTrack = false;
+// ////////////////
+// let nameData;
+// let artistNameData;
+// let trackTitleData;
+// let emailData;
+// let socialUrlData;
+// let messageData;
+// let releaseDateData;
+// let fileData;
+// let driveUrlData;
+// let isReleasedTrack = false;
 
-let messageSuccessHint = false;
+// let messageSuccessHint = false;
 
-    // ACTION AFTER SUBMIT
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    checkIcon.classList.contains("hidden") ? isReleasedTrack = "Already Released" : isReleasedTrack = "Not Released Yet"
-    // isReleasedTrack = checkIcon.classList.contains("hidden");
-    if (messageSuccessHint == false) {
-        let emailContain = email.value.includes("@" && ".");
-        if (userName.value == "" || email.value == "" || serviceType.value == "" || message.value == "" || message.value.length < 20 || !message.value.trim() || emailContain == false) {
-            if (userName.value == "") {
-                userName.classList.add("wrong")
-            }if (email.value == "" || emailContain == false) {
-                email.classList.add("wrong")
-            }if (serviceType.value == "") {
-                serviceType.classList.add("wrong")
-            }if (message.value == "") {
-                message.classList.add("wrong")
-            }
-        } else {
-                // ALL FORM DATA FOR BACKEND
-            nameData = name.value.trim();
-            artistNameData = artistName.value.trim();
-            trackTitleData = trackTitle.value.trim();
-            emailData = message.value.trim();
-            socialUrlData = message.value.trim();
-            messageData = message.value.trim();
-            releaseDateData = releaseDate.value;
-            fileData = fileInput.files[0];
-            driveUrlData = driveUrl.value.trim();
-            isReleasedTrack
-        }
-    }
-});
+//     // ACTION AFTER SUBMIT
+// // form.addEventListener('submit', function(event) {
+// //     event.preventDefault();
+// //     checkIcon.classList.contains("hidden") ? isReleasedTrack = "Already Released" : isReleasedTrack = "Not Released Yet"
+// //     // isReleasedTrack = checkIcon.classList.contains("hidden");
+// //     if (messageSuccessHint == false) {
+// //         let emailContain = email.value.includes("@" && ".");
+// //         if (userName.value == "" || email.value == "" || serviceType.value == "" || message.value == "" || message.value.length < 20 || !message.value.trim() || emailContain == false) {
+// //             if (userName.value == "") {
+// //                 userName.classList.add("wrong")
+// //             }if (email.value == "" || emailContain == false) {
+// //                 email.classList.add("wrong")
+// //             }if (serviceType.value == "") {
+// //                 serviceType.classList.add("wrong")
+// //             }if (message.value == "") {
+// //                 message.classList.add("wrong")
+// //             }
+// //         } else {
+// //                 // ALL FORM DATA FOR BACKEND
+// //             nameData = name.value.trim();
+// //             artistNameData = artistName.value.trim();
+// //             trackTitleData = trackTitle.value.trim();
+// //             emailData = message.value.trim();
+// //             socialUrlData = message.value.trim();
+// //             messageData = message.value.trim();
+// //             releaseDateData = releaseDate.value;
+// //             fileData = fileInput.files[0];
+// //             driveUrlData = driveUrl.value.trim();
+// //             isReleasedTrack
+// //         }
+// //     }
+// // });
     
-}
-contactFormFullPart()
+// }
+// contactFormFullPart()

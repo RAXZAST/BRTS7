@@ -285,11 +285,13 @@
                 <p>OR</p> -->
                 <input required name="google-drive-url" id="drive-url" style="width: 100%;" type="text" placeholder="G drive folder link">
             </div>
-            <div class="checkbox">
-                <span><svg fill="var(--sec-text)" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 26 24"><path d="M9 22l-10-10.598 2.798-2.859 7.149 7.473 13.144-14.016 2.909 2.806z"/></svg></span>
-                <p style="color: var(--sec-text); user-select: none;">This music is unreleased</p>
+            <div class="confirm" style="width: 100%; background-color: transparent; display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                <div class="checkbox">
+                    <span><svg fill="var(--sec-text)" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 26 24"><path d="M9 22l-10-10.598 2.798-2.859 7.149 7.473 13.144-14.016 2.909 2.806z"/></svg></span>
+                    <p style="color: var(--sec-text); user-select: none;">This music is unreleased</p>
+                </div>
+                <div class="h-captcha" data-captcha="true"></div>
             </div>
-            <div class="h-captcha" data-captcha="true"></div>
             <button id="submit" type="submit">SUBMIT FORM <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 20H17V5.52637L2.52734 20L0.40625 17.8789L15.2842 3H0V0H20V20Z" fill="#0D0D0D"/>
             </svg>
@@ -331,6 +333,11 @@
 <!-- Load Lenis from jsDelivr CDN -->
  <script src="https://web3forms.com/client/script.js" async defer></script>
 <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script defer src="js/animate.js"></script>
+<script src="js/frontend.js"></script>
 <script>
   // Initialize Lenis smooth scroll
   const lenis = new Lenis({
@@ -349,9 +356,4 @@
 
   requestAnimationFrame(raf);
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="js/main.js"></script>
-<script defer src="js/animate.js"></script>
-<script src="js/frontend.js"></script>
 </html>

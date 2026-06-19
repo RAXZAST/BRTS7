@@ -75,7 +75,8 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec3",
-            start: "top 20%",
+            start: "top 70%",
+            toggleActions: "play play none none",
         }
     });
 
@@ -84,26 +85,28 @@ function animation() {
         y: 15,
         opacity: 0,
         duration: 1,
-        stagger: 0.5,
+        stagger: 0.2,
         overwrite: true,
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec4 .gallery",
-            start: "top 0%",
-            toggleActions: "play play none reset"
+            start: "top 50%",
+            toggleActions: "play play none none",
+            scrub: false
         }
     });
     gsap.from(".sec4 .analytics .box, .sec4 .analytics svg", {
         y: 15,
         opacity: 0,
         duration: 1,
-        stagger: 0.5,
+        stagger: 0.2,
         overwrite: true,
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec4 .analytics",
-            start: "top 0%",
-            toggleActions: "play play none reset"
+            start: "top 50%",
+            toggleActions: "play play none none",
+            scrub: false
         }
     });
 
@@ -117,30 +120,31 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec5",
-            start: "top 0%"
+            start: "top 50%",
         }
     });
-    gsap.from(".sec5 .profiles", {
-        padding: "0 500px",
+    // gsap.from(".sec5 .profiles", {
+    //     padding: "0 200px",
+    //     duration: 1,
+    //     stagger: 0.2,
+    //     overwrite: true,
+    //     scrollTrigger: {
+    //         scroller: "body",
+    //         trigger: ".sec5 .profiles",
+    //         start: "top 50%",
+    //         toggleActions: "play play none reset"
+    //     }
+    // });
+    gsap.from(".sec5 .profiles .profile", {
+        y: 15,
+        opacity: 0,
         duration: 1,
         stagger: 0.2,
         overwrite: true,
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec5 .profiles",
-            start: "top 0%"
-        }
-    });
-    gsap.from(".sec5 .profiles .profile", {
-        y: 15,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        overwrite: true,
-        scrollTrigger: {
-            scroller: "body",
-            trigger: ".sec5 .profiles",
-            start: "top 0%"
+            start: "top 50%"
         }
     });
 
@@ -154,7 +158,7 @@ function animation() {
         scrollTrigger: {
             scroller: "body",
             trigger: ".sec6",
-            start: "top 0%"
+            start: "top 50%"
         }
     });
 
@@ -163,13 +167,13 @@ function animation() {
         y: 15,
         opacity: 0,
         duration: 1,
-        stagger: 0.5,
+        stagger: 0.2,
         overwrite: true,
         scrollTrigger: {
             scroller: "body",
             trigger: "footer",
-            start: "top 0%",
-            toggleActions: "play play none reset"
+            start: "top 50%",
+            toggleActions: "play play none none"
         }
     });
 

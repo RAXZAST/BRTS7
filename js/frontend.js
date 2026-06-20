@@ -32,7 +32,9 @@ window.addEventListener("load", function () {
 });
 
     // HOME PAGE BIG LOGO MOUSE INTERACTION 3D ROTATE
+let sec1 = document.querySelector(".sec1")
 let sec1cont = document.querySelector(".sec1 .right");
+let green = document.querySelector(".sec1 .right .green");
 let sec1img = document.querySelector(".sec1 .right img");
 
 sec1cont.addEventListener("mousemove", function (event) {
@@ -44,10 +46,19 @@ sec1cont.addEventListener("mousemove", function (event) {
     let rotateY = (x - centerX) / centerX * 9;
     let rotateX = - (y - centerY) / centerY * 9;
     sec1img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    // control RGB position with mouse, mapping to ±20px range
+    let shadowX = (x - centerX) / centerX * 10; // left/right
+    let shadowY = (y - centerY) / centerY * 10; // up/down
+    sec1img.style.filter = `drop-shadow(${-shadowX}px ${-shadowY}px 5px #CCD6FF)`;
+    green.style.filter = `drop-shadow(${-(shadowX + 3)}px ${-(shadowY + 3)}px 5px #879FFF)`;
+    sec1cont.style.filter = `drop-shadow(${-(shadowX+5)}px ${-(shadowY+5)}px 5px #493AED)`;
 });
 
 sec1cont.addEventListener("mouseleave", function () {
     sec1img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg)";
+    sec1img.style.filter = `drop-shadow(${0}px ${0}px 0px #000)`;
+    sec1cont.style.filter = `drop-shadow(${0}px ${0}px 0px #000)`;
+    green.style.filter = `drop-shadow(${0}px ${0}px 0px #000)`;
 });
 
     // CONTACT METHODS WINDOW TOGGLE

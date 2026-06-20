@@ -52,7 +52,7 @@ function animation() {
     });
 
     // SECTION 2 GSAP ANIMATION
-    gsap.from(".sec2 h2, .sec2 .album", {
+    gsap.from(".sec2 h2, .sec2 .container .box", {
         y: 15,
         opacity: 0,
         duration: 1,

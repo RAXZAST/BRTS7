@@ -154,11 +154,11 @@ svg, button, img{
 }
 .contact-window .card{
     background-color: var(--foreground);
-    padding: 30px 50px;
+    padding: 40px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     border-radius: 20px;
     box-shadow: 0 10px 8px hsla(0, 0%, 0%, 0.5);
     border: 1px solid var(--border);
@@ -379,14 +379,16 @@ header .buttons a #icon:hover{
 }
 .sec1 .right{
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     perspective: 600px;
+}
+.sec1 .right *{
+    transition: filter 0.1s;
+    transition-timing-function: ease-out;
 }
 .sec1 .right img{
     height: 400px;
     position: relative;
-    transition: 0.5s;
-    transition-timing-function: cubic-bezier(0,1.44,1,1.47);
 }
     /* SECTION 2 */
 .sec2{
@@ -408,7 +410,7 @@ header .buttons a #icon:hover{
     justify-items: center;
     padding: 0px;
 }
-.sec2 .container .album{
+.sec2 .container .box{
     background: var(--foreground);
     width: 100%;
     max-width: 290px;
@@ -420,7 +422,6 @@ header .buttons a #icon:hover{
     justify-content: space-between;
     padding: 20px;
     cursor: pointer;
-    transition: 0.2s;
 }
 .sec2 .container .album img{
     width: 100%;
@@ -430,6 +431,9 @@ header .buttons a #icon:hover{
     filter: grayscale(100%);
     border: 1px solid var(--border);
     pointer-events: none;
+}
+.sec2 .container .album{
+    transition: 0.2s;
 }
 .sec2 .container .album:hover{
     transform: scale(102%);
@@ -906,6 +910,7 @@ footer .top div #mail{
     gap: 10px;
     color: var(--sec-text);
     margin-top: 30px;
+    width: max-content;
 }
 footer .top div #mail:hover h4{
     text-decoration: underline;

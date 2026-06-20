@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success Demo Submission</title>
+<link id="favicon" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--bg);
+    font-family:'Orbitron',sans-serif;
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+        rgba(0,255,255,.15),
+        transparent 60%);
+    display: none;
+}
+
+.container{
+    position:relative;
+    width:420px;
+    padding:50px 40px;
+    text-align:center;
+    border:1px solid var(--border);
+    background:var(--foreground);
+    backdrop-filter:blur(15px);
+    border-radius:24px;
+}
+
+.icon{
+    width:100px;
+    height:100px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    border:0px solid var(--text);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--bg);
+    font-size:50px;
+    background-color: var(--text);
+}
+
+h1{
+    color:var(--text);
+    font-size: var(--h3);
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+p{
+    color:var(--sec-text);
+    font-size:0.95rem;
+    line-height:1.8;
+    margin-bottom:30px;
+    font-family: lexend;
+    line-height: 110%;
+}
+
+.btn{
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: oswald;
+    height: 50px;
+    color: var(--bg);
+    background-color: var(--text);
+    border: none;
+    padding: 0 30px;
+    font-weight: 600;
+    letter-spacing: 15%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover{
+    filter: brightness(90%);
+}
+
+.grid{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size:40px 40px;
+    pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+<div class="grid"></div>
+
+<div class="container">
+    <div class="icon">✓</div>
+
+    <h1>Form Submitted</h1>
+
+    <p>
+        Your form has been successfully submitted. <b>BRTS7</b> team will review your demo and contact you within 2 business days.
+    </p>
+
+    <a href="index.html" class="btn">GO BACK</a>
+</div>
+
+</body>
+<script>
+let fav = document.getElementById("favicon");
+const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
+
+window.addEventListener("load", function () {
+    if (prefersLightScheme.matches) {
+        fav.setAttribute("href", "media/logo/logo-black.png");
+    } else {
+        fav.setAttribute("href", "media/logo/logo-white.png");
+    }
+});
+</script>
+</html>

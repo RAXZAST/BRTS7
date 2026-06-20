@@ -33,10 +33,12 @@ async function loadReleases() {
             const artistName = data.title.split(" - ").pop();
             releaseContainer.innerHTML += `
             <div title="${data.title}" class="album" data-link="${release.spotify}" title="">
-                <img src="${data.thumbnail_url}" title="${release.tags}">
-                <div class="info">
-                    <h4 id="title">${splittedTitle}</h4>
-                    <p id="artist">${splittedArtist}</p>
+                <div class="box">
+                    <img src="${data.thumbnail_url}" title="${release.tags}">
+                    <div class="info">
+                        <h4 id="title">${splittedTitle}</h4>
+                        <p id="artist">${splittedArtist}</p>
+                    </div>
                 </div>
             </div>
         `;
@@ -81,10 +83,19 @@ previewWindow.onclick = function (event) {
 
     // CONTACT FORM
 const form = document.querySelector('form');
+const driveUrl = document.querySelector("#drive-url");
+
 
 form.addEventListener('submit', function(e) {
 
+    const driveError = driveUrl.value.includes(".com")
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!driveError) {
+        e.preventDefault();
+        alert("Please enter a valid drive url")
+        return
+    }
 
     if (!hCaptcha) {
         e.preventDefault();

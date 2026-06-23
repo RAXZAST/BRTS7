@@ -105,8 +105,8 @@ let webBrutos = document.querySelector("#web-brutos");
 let webAboutTop = document.querySelector("#web-top");
 let webAboutBottom = document.querySelector("#web-bottom");
 let webMilestone = document.querySelector("#web-milestone");
-let webListeners = document.querySelector("#web-listeners");
-let webDemos = document.querySelector("#web-demos");
+let webListeners = document.querySelectorAll("#web-listeners");
+let webDemos = document.querySelectorAll("#web-demos");
 let webListenersP = document.querySelector("#web-listeners-p");
 let webDemosP = document.querySelector("#web-demos-p");
 let copyright = document.querySelector("#copyright");
@@ -138,8 +138,12 @@ async function loadWebData() {
     webAboutTop.textContent = `${data.webdata.webTexts.about.top}`
     webAboutBottom.textContent = `${data.webdata.webTexts.about.bottom}`
     webMilestone.textContent = `${data.webdata.webTexts.milestones}`
-    webListeners.textContent = `${data.webdata.webTexts.anylytics.monthlyListeners}+`
-    webDemos.textContent = `${data.webdata.webTexts.anylytics.monthlyDemos}+`
+    webListeners.forEach(e => {
+        e.textContent = `${data.webdata.webTexts.anylytics.monthlyListeners}+`
+    });
+    webDemos.forEach(e => {
+        e.textContent = `${data.webdata.webTexts.anylytics.monthlyDemos}+`
+    });
     webListenersP.textContent = `${data.webdata.webTexts.anylytics.ListenersInNumber}+ Listeners from all over the world listening BRTS7 every month and making it one of the top record label in Brazil`
     webDemosP.textContent = `Over ${data.webdata.webTexts.anylytics.monthlyDemos}+ demos are submitted each month from various locations around the globe.`
     copyright.textContent = `${data.webdata.webTexts.copyright}`

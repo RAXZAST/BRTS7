@@ -42,9 +42,7 @@ async function loadReleases() {
                 </div>
             </div>
         `;
-        });
-
-        
+        }); 
     });
 }
 loadReleases();
@@ -82,24 +80,40 @@ previewWindow.onclick = function (event) {
 } latestReleaseUpdate()
 
     // CONTACT FORM
+let alertWindow = document.querySelector(".alert-window");
+let errorMessage = document.querySelector(".alert-window .card p");
+
+function openAlertWindow() {
+    alertWindow.style = "display: flex";
+}
+
+alertWindow.onclick = function (event) {
+    if (event.target == alertWindow) {
+        alertWindow.style = "display: none";
+    }
+}
+
 const form = document.querySelector('form');
 const driveUrl = document.querySelector("#drive-url");
+const captcha = document.querySelector(".h-captcha");
 
+driveUrl.addEventListener("focus", function () {
+    captcha.setAttribute("style", "display: flex")
+})
 
 form.addEventListener('submit', function(e) {
-
-    const driveError = driveUrl.value.includes(".com")
+    const driveError = driveUrl.value.includes(".com" || "drive")
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
     if (!driveError) {
         e.preventDefault();
-        alert("Please enter a valid drive url")
+        openAlertWindow();
+        errorMessage.textContent = "Please enter a valid drive URL"
         return
     }
-
     if (!hCaptcha) {
         e.preventDefault();
-        alert("Please confirm that you are a human by filling out captcha field")
+        openAlertWindow();
+        errorMessage.textContent = "Please fill out the hCaptcha filed"
         return
     }
 });

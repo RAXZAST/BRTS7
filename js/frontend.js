@@ -100,7 +100,7 @@ let webLink = document.querySelector("#web-logo");
 
 let webAlgus = document.querySelector("#web-algus");
 let webBrutos = document.querySelector("#web-brutos");
-let webDyren = document.querySelector("#web-dyren");
+// let webDyren = document.querySelector("#web-dyren");
 
 let webAboutTop = document.querySelector("#web-top");
 let webAboutBottom = document.querySelector("#web-bottom");
@@ -134,7 +134,7 @@ async function loadWebData() {
     webMailText.textContent = `${data.webdata.contactLinks.email}`
     webAlgus.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.algus}`)
     webBrutos.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.brutos}`)
-    webDyren.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.dyren}`)
+    //webDyren.setAttribute("href", `${data.webdata.contactLinks.foundersInstagramLinks.dyren}`)
     webAboutTop.textContent = `${data.webdata.webTexts.about.top}`
     webAboutBottom.textContent = `${data.webdata.webTexts.about.bottom}`
     webMilestone.textContent = `${data.webdata.webTexts.milestones}`

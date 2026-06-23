@@ -66,15 +66,11 @@ let contactWindow = document.querySelector(".contact-window");
 
 function openContactWindow() {
     contactWindow.style = "display: flex";
-    body.style = "overflow-y: hidden";
-    html.style = "overflow-y: hidden";
 }
 
 contactWindow.onclick = function (event) {
     if (event.target == contactWindow) {
         contactWindow.style = "display: none";
-        body.style = "overflow-y: visible";
-        html.style = "overflow-y: visible";
     }
 }
 

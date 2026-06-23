@@ -102,12 +102,12 @@ driveUrl.addEventListener("focus", function () {
 })
 
 form.addEventListener('submit', function(e) {
-    const driveError = driveUrl.value.includes(".com" || "drive")
+    const driveError = driveUrl.value.includes(".com" || ".io" || "http")
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
     if (!driveError) {
         e.preventDefault();
         openAlertWindow();
-        errorMessage.textContent = "Please enter a valid drive URL"
+        errorMessage.textContent = "Please enter a valid URL that has public access"
         return
     }
     if (!hCaptcha) {
